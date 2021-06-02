@@ -1,13 +1,132 @@
+@font-face {
+  font-family: "poppins";
+  src: url(./Poppins-Medium.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "poppins", "arial", "serif";
 }
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
   background-color: #e3e9ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  min-height: 80vh;
+  min-width: 85vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 5fr auto;
+      grid-template-rows: 1fr 5fr auto;
+}
+
+.container .title {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+  background-color: #af7eeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .todo-pane {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .todo-pane .todos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 5rem;
+}
+
+.container .todo-pane .todos .todo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 75%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  color: #8e96bb;
+}
+
+.container .todo-pane .todos .todo .checkbox-round {
+  margin: 0 1rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: #8e96bb 2px solid;
+  cursor: pointer;
+}
+
+.container .todo-pane .todos .todo .checkbox-round:checked {
+  background-color: #af7eeb;
+}
+
+.container .todo-pane .todos .trash {
+  height: 1.2rem;
+  width: 25%;
+  color: #8e96bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
