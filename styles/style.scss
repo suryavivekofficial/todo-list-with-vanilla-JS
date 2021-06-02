@@ -7,7 +7,9 @@ $text-color: #8e96bb;
 $theme-color: #af7eeb;
 $bg-color: #e3e9ff;
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,7 +27,7 @@ body {
 
 .container {
   min-height: 80vh;
-  min-width: 85vw;
+  width: 80vw;
   display: grid;
   grid-template-rows: 1fr 5fr auto;
 

@@ -3,7 +3,9 @@
   src: url(./Poppins-Medium.ttf);
 }
 
-* {
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -28,7 +30,7 @@ body {
 
 .container {
   min-height: 80vh;
-  min-width: 85vw;
+  width: 80vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 5fr auto;
