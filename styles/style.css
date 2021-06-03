@@ -131,4 +131,33 @@ body {
           justify-content: center;
   cursor: pointer;
 }
+
+.container .new-task-btn {
+  background-color: #af7eeb;
+  min-width: 30%;
+  max-width: 50%;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  color: white;
+  margin-top: -5%;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.container .new-task-btn .plus {
+  color: white;
+  height: 50%;
+  width: 20%;
+}
 /*# sourceMappingURL=style.css.map */
