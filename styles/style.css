@@ -191,6 +191,7 @@ body {
 
 .container .modal .modal-header span {
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .container .modal .modal-content {
