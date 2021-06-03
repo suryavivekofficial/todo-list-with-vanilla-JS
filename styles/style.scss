@@ -7,9 +7,7 @@ $text-color: #8e96bb;
 $theme-color: #af7eeb;
 $bg-color: #e3e9ff;
 
-*,
-::after,
-::before {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -107,6 +105,7 @@ body {
     margin-top: -5%;
     padding: 0.5rem 1rem;
     border-radius: 50px;
+    cursor: pointer;
 
     .plus {
       color: white;
@@ -114,4 +113,74 @@ body {
       width: 20%;
     }
   }
+
+  .modal {
+    display: none;
+    z-index: 2;
+    height: 30vh;
+    width: 70vw;
+    position: fixed;
+    border: 3px solid $theme-color;
+    border-radius: 20px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: $bg-color;
+    padding: 1em;
+
+    .modal-header {
+      color: $theme-color;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px $theme-color solid;
+
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    .modal-content {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      input {
+        width: 70%;
+        outline: none;
+        background-color: $bg-color;
+        border: none;
+        border-bottom: 1px solid $theme-color;
+        margin: 1rem 0rem;
+        padding: 0 0.3em;
+
+        &:focus {
+          color: $theme-color;
+        }
+      }
+
+      button {
+        outline: none;
+        background-color: $theme-color;
+        cursor: pointer;
+        padding: 0.5em 2em;
+        font-size: 1.2rem;
+        border: none;
+        color: white;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.493);
 }

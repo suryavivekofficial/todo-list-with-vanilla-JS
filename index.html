@@ -10,9 +10,18 @@
 </head>
 
 <body>
+
+    <!-- The whole container -->
+
     <div class="container">
+
+        <!-- The title of the page        -->
         <div class="title">TODO LIST</div>
+
+        <!-- The Todo div where all todos are -->
         <div class="todo-pane">
+
+            <!-- Actual Todo -->
             <div class="todos">
                 <label class="todo">
                     <input type="checkbox" class="checkbox-round">
@@ -28,6 +37,9 @@
             </div>
 
         </div>
+
+        <!-- Add Todo Button  -->
+
         <div class="new-task-btn">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus"
                 class="plus svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -36,10 +48,25 @@
                     d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z">
                 </path>
             </svg>
+
             New Task
         </div>
 
+        <!-- Modal for popup to add a Todo -->
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add Task</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-content">
+                <input autofocus type="text">
+                <button> Add </button>
+            </div>
+        </div>
+
     </div>
+    <div class="overlay"></div>
+    <script src="./app.js"></script>
 </body>
 
 </html>

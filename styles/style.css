@@ -3,9 +3,7 @@
   src: url(./Poppins-Medium.ttf);
 }
 
-*,
-::after,
-::before {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -153,11 +151,97 @@ body {
   margin-top: -5%;
   padding: 0.5rem 1rem;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .container .new-task-btn .plus {
   color: white;
   height: 50%;
   width: 20%;
+}
+
+.container .modal {
+  display: none;
+  z-index: 2;
+  height: 30vh;
+  width: 70vw;
+  position: fixed;
+  border: 3px solid #af7eeb;
+  border-radius: 20px;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  background-color: #e3e9ff;
+  padding: 1em;
+}
+
+.container .modal .modal-header {
+  color: #af7eeb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px #af7eeb solid;
+}
+
+.container .modal .modal-header span {
+  font-size: 2rem;
+}
+
+.container .modal .modal-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .modal .modal-content input {
+  width: 70%;
+  outline: none;
+  background-color: #e3e9ff;
+  border: none;
+  border-bottom: 1px solid #af7eeb;
+  margin: 1rem 0rem;
+  padding: 0 0.3em;
+}
+
+.container .modal .modal-content input:focus {
+  color: #af7eeb;
+}
+
+.container .modal .modal-content button {
+  outline: none;
+  background-color: #af7eeb;
+  cursor: pointer;
+  padding: 0.5em 2em;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  border-radius: 20px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.493);
 }
 /*# sourceMappingURL=style.css.map */
