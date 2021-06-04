@@ -80,13 +80,17 @@ body {
       }
 
       .trash {
-        height: 1.2rem;
+        height: 100%;
         width: 25%;
         color: $text-color;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+
+        .trash-icon {
+          height: 1.25rem;
+        }
       }
     }
   }
@@ -127,6 +131,7 @@ body {
     transform: translate(-50%, -30%);
     background-color: $bg-color;
     padding: 1em;
+    transition: zoom 3s ease-in-out;
 
     .modal-header {
       color: $theme-color;
@@ -184,4 +189,15 @@ body {
   right: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.493);
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+    top: 10%;
+  }
+  to {
+    transform: scale(1);
+    top: 30%;
+  }
 }
