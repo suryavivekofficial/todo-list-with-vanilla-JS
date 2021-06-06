@@ -2,12 +2,10 @@
   font-family: "poppins";
   src: url(./Poppins-Medium.ttf);
 }
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "poppins", "arial", "serif";
 }
 
@@ -15,87 +13,51 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-color: #e3e9ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  min-height: 80vh;
+  height: 80vh;
   width: 80vw;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 5fr auto;
-      grid-template-rows: 1fr 5fr auto;
+  grid-template-rows: 1fr 5fr auto;
 }
-
 .container .title {
   margin: 0.5rem 0;
   font-weight: bold;
   font-size: larger;
   color: white;
   background-color: #af7eeb;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .container .todo-pane {
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: auto;
 }
-
 .container .todo-pane .todos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 5rem;
 }
-
 .container .todo-pane .todos .todo {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   width: 75%;
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   cursor: pointer;
   color: #8e96bb;
 }
-
 .container .todo-pane .todos .todo .checkbox-round {
   margin: 0 1rem;
   height: 1.2rem;
@@ -103,53 +65,34 @@ body {
   background-color: white;
   border-radius: 50%;
   vertical-align: middle;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: #8e96bb 2px solid;
   cursor: pointer;
 }
-
 .container .todo-pane .todos .todo .checkbox-round:checked {
   background-color: #af7eeb;
 }
-
 .container .todo-pane .todos .trash {
   height: 100%;
   width: 25%;
   color: #8e96bb;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
-
 .container .todo-pane .todos .trash .trash-icon {
   height: 1.25rem;
 }
-
 .container .new-task-btn {
   background-color: #af7eeb;
   min-width: 30%;
   max-width: 50%;
   height: 2.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-item-align: center;
-      align-self: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   justify-self: center;
   color: white;
   margin-top: -5%;
@@ -157,66 +100,48 @@ body {
   border-radius: 50px;
   cursor: pointer;
 }
-
 .container .new-task-btn .plus {
   color: white;
   height: 50%;
   width: 20%;
 }
-
 .container .modal {
   display: none;
   z-index: 2;
-  height: 30vh;
-  width: 70vw;
+  min-height: 30vh;
+  width: 80vw;
   position: fixed;
-  border: 3px solid #af7eeb;
+  border: 2px solid #af7eeb;
   border-radius: 20px;
   top: 30%;
   left: 50%;
-  -webkit-transform: translate(-50%, -30%);
-          transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
   background-color: #e3e9ff;
   padding: 1em;
-  -webkit-transition: zoom 3s ease-in-out;
   transition: zoom 3s ease-in-out;
 }
-
 .container .modal .modal-header {
+  height: 30%;
+  width: 100%;
+  margin-bottom: 5rem;
   color: #af7eeb;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   border-bottom: 1px #af7eeb solid;
 }
-
 .container .modal .modal-header span {
   font-size: 2rem;
   cursor: pointer;
 }
-
 .container .modal .modal-content {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 70%;
+  width: 100%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .container .modal .modal-content input {
   width: 70%;
   outline: none;
@@ -226,11 +151,9 @@ body {
   margin: 1rem 0rem;
   padding: 0 0.3em;
 }
-
 .container .modal .modal-content input:focus {
   color: #af7eeb;
 }
-
 .container .modal .modal-content button {
   outline: none;
   background-color: #af7eeb;
@@ -249,32 +172,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    top: 10%;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    top: 30%;
-  }
-}
-
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    top: 10%;
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    top: 30%;
-  }
-}
 /*# sourceMappingURL=style.css.map */
