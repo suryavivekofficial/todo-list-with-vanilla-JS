@@ -81,6 +81,9 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+.container .todo-pane .todos .trash * {
+  pointer-events: none;
+}
 .container .todo-pane .todos .trash .trash-icon {
   height: 1.25rem;
 }
@@ -172,6 +175,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  pointer-events: all;
   background-color: rgba(0, 0, 0, 0.5);
 }
 

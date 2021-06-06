@@ -6,23 +6,19 @@ const closeModal = document.querySelector("span");
 const addTodoInput = document.querySelector(".add-todo");
 const addTodoBtn = document.querySelector(".add-todo-btn");
 const todoPane = document.querySelector(".todo-pane");
+//const trash = document.querySelectorAll(".trash");
 
 //Event Listeners
-//ModalPopup
 addTodo.addEventListener("click", openModel);
 
 closeModal.addEventListener("click", closeModalfun);
 
-//Taking Input for new todo
-addTodoBtn.addEventListener("click", () => {
-  const newTodo = addTodoInput.value;
-  if (newTodo == "") {
-    alert("The field is empty!");
-  } else {
-    addNewTodo(newTodo);
-  }
-});
+overlay.addEventListener("click", closeModalfun);
 
+addTodoBtn.addEventListener("click", beforeAddingTodo);
+
+todoPane.addEventListener("click", removeTodo);
+//Functions
 function addNewTodo(newTodo) {
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todos");
@@ -32,9 +28,18 @@ function addNewTodo(newTodo) {
   closeModalfun();
 }
 
+function removeTodo(e) {
+  const item = e.target;
+  if (item.classList[0] === "trash") {
+    const todo = item.parentElement;
+    todo.remove();
+  }
+}
+
 function closeModalfun() {
   modal.style.display = "none";
   overlay.style.display = "none";
+  clearInput();
 }
 
 function openModel() {
@@ -44,4 +49,13 @@ function openModel() {
 
 function clearInput() {
   addTodoInput.value = "";
+}
+
+function beforeAddingTodo() {
+  const newTodo = addTodoInput.value;
+  if (newTodo == "") {
+    alert("The field is empty!");
+  } else {
+    addNewTodo(newTodo);
+  }
 }

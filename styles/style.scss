@@ -90,6 +90,10 @@ body {
         justify-content: center;
         cursor: pointer;
 
+                *{
+                  pointer-events: none;
+                }
+
         .trash-icon {
           height: 1.25rem;
         }
@@ -194,5 +198,6 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  pointer-events: all;
   background-color: rgba(0, 0, 0, 0.5);
 }
