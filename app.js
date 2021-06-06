@@ -33,6 +33,8 @@ function removeTodo(e) {
   if (item.classList[0] === "trash") {
     const todo = item.parentElement;
     todo.remove();
+  } else if (item.classList[0] === "todo") {
+    item.classList.toggle("active");
   }
 }
 

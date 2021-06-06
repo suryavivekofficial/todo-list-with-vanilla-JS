@@ -25,20 +25,23 @@ body {
   grid-template-rows: 1fr 5fr auto;
 }
 .container .title {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   font-weight: bold;
   font-size: larger;
   color: white;
   background-color: #af7eeb;
   display: flex;
   align-items: center;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
   justify-content: center;
 }
 .container .todo-pane {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
   background-color: white;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 .container .todo-pane .todos {
@@ -72,7 +75,7 @@ body {
 .container .todo-pane .todos .todo .checkbox-round:checked {
   background-color: #af7eeb;
 }
-.container .todo-pane .todos .trash {
+.container .todo-pane .trash {
   height: 100%;
   width: 25%;
   color: #8e96bb;
@@ -81,13 +84,14 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-.container .todo-pane .todos .trash * {
+.container .todo-pane .trash * {
   pointer-events: none;
 }
-.container .todo-pane .todos .trash .trash-icon {
+.container .todo-pane .trash .trash-icon {
   height: 1.25rem;
 }
-.container .new-task-btn {
+
+.new-task-btn {
   background-color: #af7eeb;
   min-width: 30%;
   max-width: 50%;
@@ -103,12 +107,13 @@ body {
   border-radius: 50px;
   cursor: pointer;
 }
-.container .new-task-btn .plus {
+.new-task-btn .plus {
   color: white;
   height: 50%;
   width: 20%;
 }
-.container .modal {
+
+.modal {
   display: none;
   z-index: 2;
   min-height: 30vh;
@@ -123,7 +128,7 @@ body {
   padding: 1em;
   transition: zoom 3s ease-in-out;
 }
-.container .modal .modal-header {
+.modal .modal-header {
   height: 30%;
   width: 100%;
   margin-bottom: 5rem;
@@ -133,11 +138,11 @@ body {
   align-items: center;
   border-bottom: 1px #af7eeb solid;
 }
-.container .modal .modal-header span {
+.modal .modal-header span {
   font-size: 2rem;
   cursor: pointer;
 }
-.container .modal .modal-content {
+.modal .modal-content {
   height: 70%;
   width: 100%;
   display: flex;
@@ -145,7 +150,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.container .modal .modal-content input {
+.modal .modal-content input {
   width: 70%;
   outline: none;
   background-color: #e3e9ff;
@@ -154,10 +159,10 @@ body {
   margin: 1rem 0rem;
   padding: 0 0.3em;
 }
-.container .modal .modal-content input:focus {
+.modal .modal-content input:focus {
   color: #af7eeb;
 }
-.container .modal .modal-content button {
+.modal .modal-content button {
   outline: none;
   background-color: #af7eeb;
   cursor: pointer;
@@ -177,6 +182,10 @@ body {
   left: 0;
   pointer-events: all;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=style.css.map */
