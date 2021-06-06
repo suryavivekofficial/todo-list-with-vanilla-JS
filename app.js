@@ -9,12 +9,9 @@ const todoPane = document.querySelector(".todo-pane");
 
 //Event Listeners
 //ModalPopup
-addTodo.addEventListener("click", () => {
-  modal.style.display = "block";
-  overlay.style.display = "block";
-});
+addTodo.addEventListener("click", openModel);
 
-closeModal.addEventListener("click", closeModalfun());
+closeModal.addEventListener("click", closeModalfun);
 
 //Taking Input for new todo
 addTodoBtn.addEventListener("click", () => {
@@ -38,6 +35,11 @@ function addNewTodo(newTodo) {
 function closeModalfun() {
   modal.style.display = "none";
   overlay.style.display = "none";
+}
+
+function openModel() {
+  modal.style.display = "block";
+  overlay.style.display = "block";
 }
 
 function clearInput() {
