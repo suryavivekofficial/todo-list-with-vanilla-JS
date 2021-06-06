@@ -1,1 +1,1 @@
-You can view the live website at todo-site-js.netlify.app
+You can view the live website at https://todo-site-js.netlify.app/ 
