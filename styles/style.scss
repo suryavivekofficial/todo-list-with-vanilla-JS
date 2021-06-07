@@ -2,10 +2,16 @@
   font-family: "poppins";
   src: url(./Poppins-Medium.ttf);
 }
-
-$text-color: #8e96bb;
-$theme-color: #af7eeb;
-$bg-color: #e3e9ff;
+//color variables
+$text-color: rgba(142, 150, 187, 1);
+$theme-color: rgba(175, 126, 235, 1);
+$shadow-color: rgba(175, 126, 235, 0.3);
+$bg-color: rgba(227, 233, 255, 1);
+//meadia query variables
+$mobile-width : 480px;
+$tablet-width: 600px;
+$laptop-width: 1024px;
+$desktop-width: 1200px;
 
 * {
   margin: 0;
@@ -37,12 +43,12 @@ body {
     background-color: $theme-color;
     display: flex;
     align-items: center;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px 5px $shadow-color;
     justify-content: center;
   }
 
   .todo-pane {
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 8px 5px $shadow-color;
     background-color: white;
     display: flex;
     justify-content: flex-start;
@@ -207,4 +213,41 @@ body {
 
 .active{
   text-decoration: line-through;
+  opacity: 0.75;
+}
+
+@media screen and (min-width: $tablet-width){
+  .container{
+    width: 50vw;
+    .plus{
+      width: 10%;
+    }
+    .modal{
+      width: 30vw;
+    }
+  } 
+}
+
+@media screen and (min-width: $laptop-width){
+  .container{
+    width: 45vw;
+    .plus{
+      width: 10%;
+    }
+  .modal{
+      width: 30vw;
+    }
+}  
+}
+
+@media screen and (min-width: $desktop-width){
+  .container{
+    width: 33vw;
+    .plus{
+      width: 10%;
+    }
+  .modal{
+      width: 30vw;
+    }
+}  
 }

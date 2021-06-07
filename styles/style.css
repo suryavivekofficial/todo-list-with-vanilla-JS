@@ -32,11 +32,11 @@ body {
   background-color: #af7eeb;
   display: flex;
   align-items: center;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px 5px rgba(175, 126, 235, 0.3);
   justify-content: center;
 }
 .container .todo-pane {
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px 5px rgba(175, 126, 235, 0.3);
   background-color: white;
   display: flex;
   justify-content: flex-start;
@@ -186,6 +186,41 @@ body {
 
 .active {
   text-decoration: line-through;
+  opacity: 0.75;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 50vw;
+  }
+  .container .plus {
+    width: 10%;
+  }
+  .container .modal {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 45vw;
+  }
+  .container .plus {
+    width: 10%;
+  }
+  .container .modal {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 33vw;
+  }
+  .container .plus {
+    width: 10%;
+  }
+  .container .modal {
+    width: 30vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
